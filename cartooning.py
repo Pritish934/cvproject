@@ -11,7 +11,7 @@ edges = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C,
                                          cv2.THRESH_BINARY, 9, 9)
    
 # Cartoonization
-color = cv2.bilateralFilter(img, 9, 250, 250)
+color = cv2.bilateralFilter(img, 8, 150, 150)
 cartoon = cv2.bitwise_and(color, color, mask=edges)
    
    
